@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.break-words {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.break-all {
+  word-break: break-all;
+}
