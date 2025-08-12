@@ -52,7 +52,7 @@ function App() {
     setDate("");
 
     localStorage.setItem("todos", JSON.stringify(newTodos));
-    localStorage.setItem("dates", JSON.stringify(newDates)); // ✅ FIXED LINE
+    localStorage.setItem("dates", JSON.stringify(newDates)); 
     localStorage.setItem("checked", JSON.stringify(newChecked));
     localStorage.setItem("moves", JSON.stringify(newmoves));
 
@@ -166,9 +166,14 @@ function App() {
           <button onClick={handleADD} className='bg-[#00f2fe] font-bold px-[0.8rem] py-[0.2rem] rounded-[0.4rem] hover:scale-115 cursor-pointer text-white transition-all duration-[300ms] text-shadow-2xs text-shadow-black [box-shadow:0px_2px_2px_black]  '>ADD</button>
 
         </form>
-        {todos.length === 0 && <div className=' mb-2 text-center text-gray-400 text-[1rem] flex flex-col justify-between  '>
+        {todos.length === 0 && <div className=' mb-2 text-center text-gray-400 text-[1rem] flex flex-col justify-between items-center  '>
           No Todos to display 😴
-          <img src="/todo_icon.png" alt="" className=' h-55 w-50 p-[20px_0px_0px_0px] ' />
+          <img
+            src="todo_icon.png"
+            alt="React logo"
+            width="200"
+            height="200"
+          />
         </div>}
 
         {todos.length !== 0 && <div className=' mb-2 text-center text-gray-400 text-[1rem] '> Tasks: {todos.length} | Left: {todos.length - complete()} </div>}
