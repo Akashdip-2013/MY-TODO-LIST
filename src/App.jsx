@@ -37,7 +37,8 @@ function App() {
       return;
     }
 
-    playClickSound();
+    const clk = new Audio('click.wav');
+    clk.play();
 
     const newTodos = [...todos, todo];
     const newDates = [...dates, date];
@@ -135,11 +136,6 @@ function App() {
     const completedCount = checked.filter((val) => val).length;
     return completedCount;
 
-  }
-
-  function playClickSound() {
-    const audio = new Audio("/click.mp3");
-    audio.play();
   }
 
   function getCurrentDateTimeLocal() {
